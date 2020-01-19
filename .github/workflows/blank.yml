@@ -4,7 +4,7 @@ on: [push, repository_dispatch]
 
 jobs:
   build:
-
+    if: contains(${{ github.event.client_payload.tenant }}, 'hsf')
     runs-on: ubuntu-latest
 
     steps:
