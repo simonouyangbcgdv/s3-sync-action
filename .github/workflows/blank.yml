@@ -16,5 +16,6 @@ jobs:
       run: echo Hello, world, dear!
     - name: Run a multi-line script
       run: |
+        echo ${{ github.event.client_payload.tenant }}
         echo Add other actions to build,
         echo test, and deploy your project.
